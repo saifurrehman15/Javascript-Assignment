@@ -44,25 +44,25 @@
 
 // //Q3
 
-// var message = "Hello World"
+// var message;
 
-// alert(message)
+// message = "Hello World";
+
+// alert(message);
 
 
 
 // //Q4
 
-// var myName ="Saif"
+// var myName ="Saif",Age ="19",course = "Web & App Development";
 
-// alert (myName)
+// alert (myName);
 
-// var Age ="19"
 
-// alert (Age)
+// alert (Age);
 
-// var course ="Web & App Development"
 
-// alert (course)
+// alert (course);
 
 
 // //Q5
@@ -74,10 +74,10 @@
 
 // //Q6
 
-// var EmailAddress = "My Email Address is saifrizwankhan786@gmail.com";
+// var EmailAddress = "saifrizwankhan786@gmail.com";
 
 
-// alert(EmailAddress);
+// alert(" My Email Address is  " + EmailAddress);
 
 
 
@@ -85,10 +85,10 @@
 // //Q7
 
 
-// var book = "I am trying to learn from the Book A Smarter \nWay to learn Javascript"
+// var book = " A Smarter \nWay to learn Javascript"
 
 
-// alert(book)
+// alert("I am trying to learn from the Book" + book)
 
 
 // //Q8
@@ -113,32 +113,32 @@
 
 // //Q1
 
-// var age = "I am 19 years old"
+// var age = "19 years "
 
-// alert(age)
+// alert(" I am "  +  age + " old ")
 
 
 // //Q2
 
 
-// var visitors = "You have visited this site  10 times"
+// var visitors = "10 times"
 
-// alert(visitors)
+// alert(" You have visited this site " + visitors)
 
 
 // //Q3
 
 
-// var birthYear = "My birth year is 2005"
+// var birthYear = "2005"
 
-// document.write(birthYear)
+// document.write(" My birth year is " + birthYear)
 
 
 // //Q4
 
-// var information = "John Doe ordered 5 T-shirt(s) on Kids Bazaar."
+// var  visitorsName = "John Doe",productTitle = "T-shirt(s)",Quantity = 5; 
 
-// document.write(information)
+// document.write(visitorsName + " ordered " + Quantity + productTitle + "  on kidsbazaar. ")
 
 // //Q5
 
