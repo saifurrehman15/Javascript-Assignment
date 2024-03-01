@@ -354,3 +354,141 @@
 // var SaudiRiyal = 25;
 // var total_currency =($Usdollar1 * $Usdollar) + (SaudiRiyal1 * SaudiRiyal);
 // document.write("Total Currency in PKR:" + total_currency);
+
+
+//Q10
+
+
+// var num = 15;
+
+// num = (15 + 5 )* 10 / 2;
+
+// document.write(num);
+
+
+
+//Q11
+
+
+// var currentYear = 2024;
+// var birthYear = 2004;
+// var Age = currentYear - birthYear;
+
+// document.write(Age)
+
+
+//Q12
+
+// document.write("<h1> The Geometrizer </h1>")
+
+// var radiusOfCircle = 25;
+// document.write("<p>" + " The Radius of a Circle: " + radiusOfCircle + "</p>");
+// var circumference = 2 * 3.142 * radiusOfCircle;// "2πr";
+// document.write("<p>" + " The Circumference is:" + circumference + "</p>");
+
+// var area = 2 * 3.142 * (radiusOfCircle * radiusOfCircle);// "πr<sup>2</sup>";
+
+
+// document.write("The area is: " + area);
+
+
+//Q13
+
+
+// document.write("<h1> Life Time Supply Calculator</h1>");
+
+// var favourite_snack = "Potato Stick";
+
+// document.write("<p>" + "Favourite Snack: " + favourite_snack + "</p>");
+
+// var currentAge = 15;
+
+// document.write("<p>" + "Current Age: " + currentAge+ "</p>");
+
+// var Estimated = 65;
+
+// document.write("<p>" + "Estimated Maximum Age: " + Estimated + "</p>");
+
+// var amount_perday = 3 ;
+
+// document.write("<p>" + "Amount perday: " + amount_perday + "</p>");
+
+// var total_amount = (Estimated - currentAge) * amount_perday; 
+
+// document.write("<p>" + "You will need  " + total_amount + " to last you until the ripe old age of " + Estimated + "</p>");
+
+
+
+//Chapter 6-9
+
+//Q1
+
+// var a1 = 10;
+
+// document.write("<p> Result: </p>")
+// document.write("<p style='border-bottom:1px dotted black;width:15%;padding: 0px 0px 15px 0px;'>" + " The value of a1 is: " + a1 + "</p>");
+
+// ++a1;
+
+// document.write("<p >" + " The value of ++a1 is: " + a1 + "</p>");
+// document.write("<p >" + " Now the value of a1 is: " + a1 + "</p>");
+
+// a1++;
+
+// document.write("<p > The value of a1++ is: 11 </p>");
+// document.write("<p >" + " Now The value of a1 is: " + a1 + "</p>");
+
+// --a1;
+
+// document.write("<p>" + " The value of --a1 is: " + a1 + "</p>");
+// document.write("<p>" + " Now The value of a1 is: " + a1 + "</p>");
+
+// a1--;
+
+// document.write("<p > The value of a1-- is: 11 </p>");
+// document.write("<p>" + " Now The value of --a1 is: " + a1 + "</p>");
+
+
+
+
+
+//Q2
+
+
+
+// var p = 2;
+// document.write("<p>" + " p is : " + p + "</p>");
+// var q = 1;
+// document.write("<p>" + " q is : " + q + "</p>");
+
+// var Output= --p - --q + ++q + q--;
+// document.write("<p>" + "result is : " + Output + "</p>");
+
+
+// document.write("<h3> Explanation : </h3>");
+
+// document.write("<p> --p ; </p>");
+// document.write("The value is : 1");
+
+// document.write("<p> --p - --q ; </p>");
+// document.write("The value is : 1");
+
+
+// document.write("<p> --p - --q + ++q ; </p>");
+// document.write("The value is : 3");
+
+// document.write("<p> --p - --q + ++q + q-- ; </p>");
+// document.write("The value is : 3");
+
+
+
+
+//
+
+
+// //Q3
+
+//     var userName = prompt("Please enter your name:");
+//     if (userName !== null) {
+//         alert("Hello, " + userName + "! Welcome!");
+//     };
