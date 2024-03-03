@@ -6,8 +6,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="app.js"></script>
+    <style>
+        body {
+            /* background-color: black;
+            color: #fff; */
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid white;
+
+            padding: 8px 40px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            border: none;
+            border: 1px solid gray;
+            background: none;
+            width: 80%;
+            height: 30px;
+            /* color: #fff; */
+            outline: none;
+            margin: 10px 0px;
+        }
+
+        input[type="number"] {
+            width: 20%;
+            height: 30px;
+            /* background-color: black; */
+            border: 1px solid black;
+            /* color: #fff; */
+            border-radius: 10px;
+        }
+
+        input[type="number"]:focus {
+            outline: 1px solid orangered;
+        }
+
+
+        input:focus {
+            border-bottom: 2px solid orangered;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            height: 30px;
+            margin: 10px 0px;
+            background-color: green;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 18px;
+            border: none;
+        }
+
+        label {
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .row {
+            display: flex;
+            margin: 5px;
+            gap: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!-- <div style="text-align: center;">
+        <h1>Result Generator</h1>
+        <p>Total Marks of each subject is 100.</p>
+    </div>
+    <div class="container">
+        <div style="padding: 0px 10px;">
+            <div style="display: flex;justify-content: space-between;">
+                <div>
+                    <h3>Subjects</h3>
+                </div>
+                <div>
+                    <h3>Marks</h3>
+                </div>
+
+            </div>
+            <form>
+                <div class="row">
+
+                    <input type="text" name="" id="subject1" placeholder="Enter Subject1" required="">
+                    <input type="number" name="" id="marks1" required="">
+                    <br>
+                </div>
+                <div class="row">
+
+                    <input type="text" name="" id="subject2" placeholder="Enter Subject2" required="">
+                    <input type="number" name="" id="marks2" required="">
+
+                    <br>
+                </div>
+                <div class="row">
+                    <input type="text" name="" id="subject3" placeholder="Enter Subject3" required="">
+                    <input type="number" name="" id="marks3" required="">
+                    <br>
+                </div>
+                <div class="row">
+                    <input type="text" name="" id="subject4" placeholder="Enter Subject4" required="">
+                    <input type="number" name="" id="marks4" required="">
+
+                    <br>
+                </div>
+                <div class="row">
+                    <input type="text" name="" id="subject5" placeholder="Enter Subject5">
+                    <input type="number" name="" id="marks5" required="">
+
+                    <br>
+                </div>
+
+
+                <button type="button" onclick="marksheet()">Generate Result</button>
+            </form>
+        </div>
+    </div>
+    <div id="result"></div>
+    <script>
+        function marksheet() {
+            var subject1 = document.getElementById("subject1").value;
+            var subject2 = document.getElementById("subject2").value;
+            var subject3 = document.getElementById("subject3").value;
+            var subject4 = document.getElementById("subject4").value;
+            var subject5 = document.getElementById("subject5").value;
+
+
+            var total_marks = 500;
+
+            var obtained_marks1 = parseInt(document.getElementById("marks1").value);
+            var obtained_marks2 = parseInt(document.getElementById("marks2").value);
+            var obtained_marks3 = parseInt(document.getElementById("marks3").value);
+            var obtained_marks4 = parseInt(document.getElementById("marks4").value);
+            var obtained_marks5 = parseInt(document.getElementById("marks5").value);
+
+            var totalObtainedMarks = obtained_marks1 + obtained_marks2 + obtained_marks3 + obtained_marks4 + obtained_marks5;
+            var percentage = (totalObtainedMarks * 100) / total_marks;
+            var grade;
+
+
+            if (totalObtainedMarks !== null) {
+                percentage = 0;
+            }
+
+            //For Grading
+            if (percentage >= 80) {
+                grade = "A-One";
+            } else if (percentage >= 70) {
+                grade = "A";
+            } else if (percentage >= 60) {
+                grade = "B";
+            } else if (percentage >= 50) {
+                grade = "C";
+            } else if (percentage >= 40) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+            var Remarks;
+            if (percentage >= 80) {
+                Remarks = "Excellent";
+            }
+            else if (percentage >= 70) {
+                Remarks = "V.Good";
+            }
+            else if (percentage >= 60) {
+                Remarks = "Good";
+            }
+            else if (percentage >= 50) {
+                Remarks = "Fair";
+            } else if (percentage >= 40) {
+                Remarks = "Not Satisfying";
+            }
+            else {
+                Remarks = "Failed"
+            }
+            //Grading
+
+
+            //For TableDisplay
+            var resultTable =
+                "<table><tr><th>Subject</th><th>Obtained Marks</th></tr>" +
+                "<tr><td>" + subject1 + "</td><td>" + obtained_marks1 + "</td></tr>" +
+                "<tr><td>" + subject2 + "</td><td>" + obtained_marks2 + "</td></tr>" +
+                "<tr><td>" + subject3 + "</td><td>" + obtained_marks3 + "</td></tr>" +
+                "<tr><td>" + subject4 + "</td><td>" + obtained_marks4 + "</td></tr>" +
+                "<tr><td>" + subject5 + "</td><td>" + obtained_marks5 + "</td></tr>" +
+
+                "<tr><td>Total</td><td>" + totalObtainedMarks + "</td></tr>" +
+                "<tr><td>Grade</td><td>" + grade + "</td></tr>" +
+                "<tr><td>Remarks</td><td>" + Remarks + "</td></tr>" +
+
+                "<tr><td>Percentage</td><td>" + percentage + "%</td></tr></table>";
+
+            document.getElementById("result").innerHTML = resultTable;
+
+
+        }
+    </script>
+
+ -->
+    <!-- <div>
+        <input type="number" name="" id="table" max="10">
+        <button type="button" onclick="multiplication()">
+            Generate
+        </button>
+    </div>
+    <div id="tb"></div>
+    <script>
+        function multiplication() {
+            var table = parseInt(document.getElementById("table").value);
+            var ope1 = table * 1;
+            var ope2 = table * 2;
+            var ope3 = table * 3;
+            var ope4 = table * 4;
+            var ope5 = table * 5;
+            var ope6 = table * 6;
+            var ope7 = table * 7;
+            var ope8 = table * 8;
+            var ope9 = table * 9;
+            var ope10 = table * 10;
+            var ope11 = table * 11;
+            var ope12 = table * 12;
+
+            var multi =
+                "<table><tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "1" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope1 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "2" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope2 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "3" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope3 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "4" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope4 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "5" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope5 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "6" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope6 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "7" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope7 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "8" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope8 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "9" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope9 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "10" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope10 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "11" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope11 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "12" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope12 + "</td>" + "</tr></table>";
+            document.getElementById("tb").innerHTML = multi;
+        }
+    </script>
+ -->
+
+    <p id="traffic"></p>
 </body>
+
 </html>
