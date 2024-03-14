@@ -18,11 +18,13 @@
             border-collapse: collapse;
             width: 50%;
             margin: 20px auto;
+            border: 1px solid black;
+
         }
 
         th,
         td {
-            border: 1px solid white;
+            border: 1px solid black;
 
             padding: 8px 40px;
             text-align: center;
@@ -86,7 +88,7 @@
 </head>
 
 <body>
-    <!-- <div style="text-align: center;">
+     <!-- <div style="text-align: center;">
         <h1>Result Generator</h1>
         <p>Total Marks of each subject is 100.</p>
     </div>
@@ -138,8 +140,8 @@
             </form>
         </div>
     </div>
-    <div id="result"></div>
-    <script>
+    <div id="result"></div> -->
+    <!-- <script>
         function marksheet() {
             var subject1 = document.getElementById("subject1").value;
             var subject2 = document.getElementById("subject2").value;
@@ -160,10 +162,6 @@
             var percentage = (totalObtainedMarks * 100) / total_marks;
             var grade;
 
-
-            if (totalObtainedMarks !== null) {
-                percentage = 0;
-            }
 
             //For Grading
             if (percentage >= 80) {
@@ -195,7 +193,7 @@
                 Remarks = "Not Satisfying";
             }
             else {
-                Remarks = "Failed"
+                Remarks = "<p style='color:red'>Failed</p>"
             }
             //Grading
 
@@ -215,13 +213,17 @@
 
                 "<tr><td>Percentage</td><td>" + percentage + "%</td></tr></table>";
 
-            document.getElementById("result").innerHTML = resultTable;
 
+                if(obtained_marks1 && obtained_marks2 && obtained_marks3 && obtained_marks4 && obtained_marks5 !== ""){
+            document.getElementById("result").innerHTML = resultTable;
+                }else{
+                    alert("Value is not assigned properly")
+                }
 
         }
-    </script>
+    </script> -->
 
- -->
+ 
     <!-- <div>
         <input type="number" name="" id="table" max="10">
         <button type="button" onclick="multiplication()">
@@ -230,7 +232,7 @@
     </div>
     <div id="tb"></div>
     <script>
-        function multiplication() {
+        function multiplication(){
             var table = parseInt(document.getElementById("table").value);
             var ope1 = table * 1;
             var ope2 = table * 2;
@@ -258,12 +260,15 @@
                 + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "10" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope10 + "</td>" + "</tr>"
                 + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "11" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope11 + "</td>" + "</tr>"
                 + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "12" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope12 + "</td>" + "</tr></table>";
-            document.getElementById("tb").innerHTML = multi;
+           
+           
+           
+                document.getElementById("tb").innerHTML = multi;
         }
     </script>
- -->
 
-    <p id="traffic"></p>
+
+    <p id="traffic"></p> -->
 </body>
 
 </html>
