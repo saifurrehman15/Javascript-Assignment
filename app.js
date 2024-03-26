@@ -1020,21 +1020,137 @@
 
 // </select>`);
 
+//Chapter14-16
+
+
+
+
+
+//class excercise
+
+
+
+// var cars = ['Audi','Suzuki','Alto','Lamborghini'];
+
+// document.write('<h1>Favourite Cars</h1>');
+
+// document.write(cars);
+
+
+// document.write(`First index of the array is : 0`);
+// document.write()
 
 
 
 
 
 
+// var cities = ['Karachi','Hyderabad','Sukkhur','Peshawar'];
+// console.log(cities.length)
+
+// for(var i = 0 ;i< cities.length;i++){
+// console.log(i,cities)
+// }
+
+
+// var table = 2;
+// for(i = 1; i < 11;i++){
+//     document.write(`<table><tr><td>${table} X ${i} = </td><td>${table * i}</td></tr></table>`)
+// }
 
 
 
-
-//Class Excercise
-// var num = parseInt(prompt("Enter any number which is divided by 3 as well as 5"));
+// //Class Excercise
+// // var num = parseInt(prompt("Enter any number which is divided by 3 as well as 5"));
 
 // if(num % 3 == 0  && num % 5 == 0){
 //     alert(true)
 // }else{
 //     alert(false)
+// }
+
+
+// var userInp = prompt("Enter Table number you want");
+// var userInp2 = prompt("Enter length of table");
+
+// for(var i = 1; i <= userInp2; i++){
+// document.write(`${userInp} x ${i} = ${userInp * i} <br><br>`)
+// }
+
+
+// var arr = ['Karachi', 'Lahore', 'Hyderabad', 'Islamabad'];
+// var inp = prompt("Enter Your City Name")
+// for (i = 0; i < arr.length; i++) {
+//     if (inp === arr[i]) {
+//         document.write("City Founded")
+//         break
+//     }
+// }
+// if (inp !== arr[i]) {
+
+//     document.write("City not Found");
+// }
+// else if (inp === null || inp === "") {
+//     document.write("Value not assigned")
+// }
+
+
+// practice
+
+// for(var i = 1; i < 100 ; i= i+10){
+//     for(var j = i; j < i + 10;j++){
+//         document.write(j + "  ")
+//     }
+//     document.write("<br>")
+
+// }
+
+// var x = 0;
+
+// var interval = setInterval(function(){
+//     x = x+1;
+//     document.getElementById("show").innerHTML = x;
+// }, 100);
+
+
+
+
+// factorial
+// var promptmy = prompt("enter any number");
+
+// for(var i = promptmy - 1 ; i >= 0;--i){
+//     document.write( promptmy * i + "<br>");
+// }
+
+
+// var my = prompt("Enter any word which is reversible but not changed");
+// var upper = my.slice(0,my.length).toUpperCase();
+
+// if(upper === upper.split('').reverse('').join('')){
+//     alert("It is Palindrome")
+// }else{
+//     alert("It is not palindrome")
+// }
+
+// for(var i = 1; i<= 5;i++){
+//     for(var j = 1; j <=i ;j++){
+//         document.write(j + " ")
+//     }
+//     document.write("<br>")
+// }
+
+// for(var i =5; i>=1;i--){
+//     for(var j = 5;j>=i;--j){
+// document.write(j + "  ")
+//     }
+//     document.write("<br>")
+// }
+
+
+// for(i = 1; i<=5 ; i++){
+//     for(var j=1;j<=i;j++){
+//         document.write("*")
+//     }
+    
+//     document.write("<br>")
 // }
