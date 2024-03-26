@@ -1,7 +1,92 @@
+@ -1,274 +1,1407 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <style>
+        body {
+            /* background-color: black;
+            color: #fff; */
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            border: 1px solid black;
+
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+
+            padding: 8px 40px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            border: none;
+            border: 1px solid gray;
+            background: none;
+            width: 80%;
+            height: 30px;
+            /* color: #fff; */
+            outline: none;
+            margin: 10px 0px;
+        }
+
+        input[type="number"] {
+            width: 20%;
+            height: 30px;
+            /* background-color: black; */
+            border: 1px solid black;
+            /* color: #fff; */
+            border-radius: 10px;
+        }
+
+        input[type="number"]:focus {
+            outline: 1px solid orangered;
+        }
+
+
+        input:focus {
+            border-bottom: 2px solid orangered;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            height: 30px;
+            margin: 10px 0px;
+            background-color: green;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 18px;
+            border: none;
+        }
+
+        label {
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .row {
+            display: flex;
+            margin: 5px;
+            gap: 5px;
+        }
+    </style>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -566,6 +651,189 @@ display:none !important;
 z-index:1000;
 }</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1555492925576{padding-top: 40px !important;padding-bottom: 40px !important;background-image: url(http://gurupalacerestaurant.com/wp-content/uploads/2019/04/bg.jpg?id=696) !important;}.vc_custom_1554703370287{padding-top: 60px !important;padding-bottom: 60px !important;background-image: url(http://gurupalacerestaurant.com/wp-content/uploads/2019/04/catering-back.jpg?id=549) !important;}.vc_custom_1554706762673{background: #ffffff url(http://gurupalacerestaurant.com/wp-content/uploads/2019/04/menu-graphic-1.png?id=567) !important;background-position: 0 0 !important;background-repeat: no-repeat !important;}.vc_custom_1554707909991{padding-top: 60px !important;padding-bottom: 60px !important;background-image: url(http://gurupalacerestaurant.com/wp-content/uploads/2019/04/location-back.jpg?id=575) !important;}.vc_custom_1505393424909{margin-top: -155px !important;}.vc_custom_1557811883240{padding-top: 50px !important;padding-bottom: 50px !important;background-image: url(http://gurupalacerestaurant.com/wp-content/uploads/2019/05/slide-border-1.jpg?id=1242) !important;}.vc_custom_1554702495266{padding-top: 20px !important;padding-bottom: 20px !important;}.vc_custom_1554702519333{padding-top: 20px !important;padding-bottom: 20px !important;}.vc_custom_1554703292291{padding-top: 20px !important;padding-bottom: 20px !important;}.vc_custom_1554703315379{padding-top: 20px !important;padding-bottom: 20px !important;}.vc_custom_1554704064326{padding-top: 20px !important;padding-bottom: 20px !important;}.vc_custom_1556085379041{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1556085379041{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1556085440057{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1556085449144{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1556085456785{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1556085465739{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1554707845728{padding-top: 20px !important;padding-bottom: 20px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	<script data-ad-client="ca-pub-9536970863983374" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
+
+<body>
+     <!-- <div style="text-align: center;">
+        <h1>Result Generator</h1>
+        <p>Total Marks of each subject is 100.</p>
+    </div>
+    <div class="container">
+        <div style="padding: 0px 10px;">
+            <div style="display: flex;justify-content: space-between;">
+                <div>
+                    <h3>Subjects</h3>
+                </div>
+                <div>
+                    <h3>Marks</h3>
+                </div>
+
+            </div>
+            <form>
+                <div class="row">
+
+                    <input type="text" name="" id="subject1" placeholder="Enter Subject1" required="">
+                    <input type="number" name="" id="marks1" required="">
+                    <br>
+                </div>
+                <div class="row">
+
+                    <input type="text" name="" id="subject2" placeholder="Enter Subject2" required="">
+                    <input type="number" name="" id="marks2" required="">
+
+                    <br>
+                </div>
+                <div class="row">
+                    <input type="text" name="" id="subject3" placeholder="Enter Subject3" required="">
+                    <input type="number" name="" id="marks3" required="">
+                    <br>
+                </div>
+                <div class="row">
+                    <input type="text" name="" id="subject4" placeholder="Enter Subject4" required="">
+                    <input type="number" name="" id="marks4" required="">
+
+                    <br>
+                </div>
+                <div class="row">
+                    <input type="text" name="" id="subject5" placeholder="Enter Subject5">
+                    <input type="number" name="" id="marks5" required="">
+
+                    <br>
+                </div>
+
+
+                <button type="button" onclick="marksheet()">Generate Result</button>
+            </form>
+        </div>
+    </div>
+    <div id="result"></div> -->
+    <!-- <script>
+        function marksheet() {
+            var subject1 = document.getElementById("subject1").value;
+            var subject2 = document.getElementById("subject2").value;
+            var subject3 = document.getElementById("subject3").value;
+            var subject4 = document.getElementById("subject4").value;
+            var subject5 = document.getElementById("subject5").value;
+
+
+            var total_marks = 500;
+
+            var obtained_marks1 = parseInt(document.getElementById("marks1").value);
+            var obtained_marks2 = parseInt(document.getElementById("marks2").value);
+            var obtained_marks3 = parseInt(document.getElementById("marks3").value);
+            var obtained_marks4 = parseInt(document.getElementById("marks4").value);
+            var obtained_marks5 = parseInt(document.getElementById("marks5").value);
+
+            var totalObtainedMarks = obtained_marks1 + obtained_marks2 + obtained_marks3 + obtained_marks4 + obtained_marks5;
+            var percentage = (totalObtainedMarks * 100) / total_marks;
+            var grade;
+
+
+            //For Grading
+            if (percentage >= 80) {
+                grade = "A-One";
+            } else if (percentage >= 70) {
+                grade = "A";
+            } else if (percentage >= 60) {
+                grade = "B";
+            } else if (percentage >= 50) {
+                grade = "C";
+            } else if (percentage >= 40) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+            var Remarks;
+            if (percentage >= 80) {
+                Remarks = "Excellent";
+            }
+            else if (percentage >= 70) {
+                Remarks = "V.Good";
+            }
+            else if (percentage >= 60) {
+                Remarks = "Good";
+            }
+            else if (percentage >= 50) {
+                Remarks = "Fair";
+            } else if (percentage >= 40) {
+                Remarks = "Not Satisfying";
+            }
+            else {
+                Remarks = "<p style='color:red'>Failed</p>"
+            }
+            //Grading
+
+
+            //For TableDisplay
+            var resultTable =
+                "<table><tr><th>Subject</th><th>Obtained Marks</th></tr>" +
+                "<tr><td>" + subject1 + "</td><td>" + obtained_marks1 + "</td></tr>" +
+                "<tr><td>" + subject2 + "</td><td>" + obtained_marks2 + "</td></tr>" +
+                "<tr><td>" + subject3 + "</td><td>" + obtained_marks3 + "</td></tr>" +
+                "<tr><td>" + subject4 + "</td><td>" + obtained_marks4 + "</td></tr>" +
+                "<tr><td>" + subject5 + "</td><td>" + obtained_marks5 + "</td></tr>" +
+
+                "<tr><td>Total</td><td>" + totalObtainedMarks + "</td></tr>" +
+                "<tr><td>Grade</td><td>" + grade + "</td></tr>" +
+                "<tr><td>Remarks</td><td>" + Remarks + "</td></tr>" +
+
+                "<tr><td>Percentage</td><td>" + percentage + "%</td></tr></table>";
+
+
+                if(obtained_marks1 && obtained_marks2 && obtained_marks3 && obtained_marks4 && obtained_marks5 !== ""){
+            document.getElementById("result").innerHTML = resultTable;
+                }else{
+                    alert("Value is not assigned properly")
+                }
+
+        }
+    </script> -->
+
+ 
+    <!-- <div>
+        <input type="number" name="" id="table" max="10">
+        <button type="button" onclick="multiplication()">
+            Generate
+        </button>
+    </div>
+    <div id="tb"></div>
+    <script>
+        function multiplication(){
+            var table = parseInt(document.getElementById("table").value);
+            var ope1 = table * 1;
+            var ope2 = table * 2;
+            var ope3 = table * 3;
+            var ope4 = table * 4;
+            var ope5 = table * 5;
+            var ope6 = table * 6;
+            var ope7 = table * 7;
+            var ope8 = table * 8;
+            var ope9 = table * 9;
+            var ope10 = table * 10;
+            var ope11 = table * 11;
+            var ope12 = table * 12;
+
+            var multi =
+                "<table><tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "1" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope1 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "2" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope2 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "3" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope3 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "4" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope4 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "5" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope5 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "6" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope6 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "7" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope7 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "8" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope8 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "9" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope9 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "10" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope10 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "11" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope11 + "</td>" + "</tr>"
+                + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "12" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope12 + "</td>" + "</tr></table>";
+           
+           
+           
+                document.getElementById("tb").innerHTML = multi;
+        }
+    </script>
+
+
+    <p id="traffic"></p> -->
 <body class="home page-template page-template-full_width page-template-full_width-php page page-id-14 bridge-core-1.0.4  qode-title-hidden qode-theme-ver-18.0.7 qode-theme-bridge wpb-js-composer js-comp-ver-7.0 vc_responsive"  >
 <div class="wrapper">
 <div class="wrapper_inner">
@@ -1404,4 +1672,6 @@ allowHTML5AutoPlayOnAndroid:true
 if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
 </script>
 </body>
+
+</html>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'sg2plzcpnl492054'},{'dcenter':'sg2'},{'cp_id':'5673574'},{'cp_cache':''},{'cp_cl':'6'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html><!-- WP Fastest Cache file was created in 0.34057188034058 seconds, on 26-12-23 13:18:08 --><!-- via php -->
