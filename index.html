@@ -1,28 +1,20 @@
-@ -18,11 +18,13 @@
-            border-collapse: collapse;
-            width: 50%;
-            margin: 20px auto;
-            border: 1px solid black;
+<!DOCTYPE html>
+<html lang="en">
 
-        }
-
-        th,
-        td {
-            border: 1px solid white;
-            border: 1px solid black;
-
-            padding: 8px 40px;
-            text-align: center;
-@ -86,7 +88,7 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="chap 1-20.js"></script>
 </head>
 
 <body>
+
     <!-- <div style="text-align: center;">
-     <!-- <div style="text-align: center;">
+      <div style="text-align: center;">
         <h1>Result Generator</h1>
         <p>Total Marks of each subject is 100.</p>
     </div>
-@ -138,8 +140,8 @@
             </form>
         </div>
     </div>
@@ -33,7 +25,6 @@
         function marksheet() {
             var subject1 = document.getElementById("subject1").value;
             var subject2 = document.getElementById("subject2").value;
-@ -161,10 +163,6 @@
             var grade;
 
 
@@ -44,7 +35,6 @@
             //For Grading
             if (percentage >= 80) {
                 grade = "A-One";
-@ -195,7 +193,7 @@
                 Remarks = "Not Satisfying";
             }
             else {
@@ -53,7 +43,6 @@
             }
             //Grading
 
-@ -215,13 +213,17 @@
 
                 "<tr><td>Percentage</td><td>" + percentage + "%</td></tr></table>";
 
@@ -69,12 +58,11 @@
     </script>
     </script> -->
 
- -->
- 
+
+
     <!-- <div>
         <input type="number" name="" id="table" max="10">
         <button type="button" onclick="multiplication()">
-@ -230,7 +232,7 @@
     </div>
     <div id="tb"></div>
     <script>
@@ -83,7 +71,6 @@
             var table = parseInt(document.getElementById("table").value);
             var ope1 = table * 1;
             var ope2 = table * 2;
-@ -258,12 +260,15 @@
                 + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "10" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope10 + "</td>" + "</tr>"
                 + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "11" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope11 + "</td>" + "</tr>"
                 + "<tr><td>" + table + "</td>" + "<td>" + "x" + "</td>" + "<td>" + "12" + "</td>" + "<td>" + "=" + "</td>" + "<td>" + ope12 + "</td>" + "</tr></table>";
@@ -97,8 +84,6 @@
  -->
 
     <p id="traffic"></p>
-
-    <p id="traffic"></p> -->
 </body>
 
 </html>
