@@ -6,9 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="chap 1-20.js"></script>
+    <script src="chap 20-25.js"></script>
+    <script src="chap 26-30.js"></script>
+    <script src="chap 31-34.js"></script>
+    <script src="chap 35-38.js"></script>
+
+    <style>
+        .form,
+        #generate {
+            width: 400px;
+            background-color: #fafafa;
+            border: 1px solid rgb(175, 175, 175);
+            padding: 0px 10px;
+            margin: 50px auto;
+        }
+
+        input {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 10px 0px;
+            border-radius: 5px;
+            outline: none;
+            background-color: #fafafa;
+
+        }
+
+        p {
+            font-weight: 100;
+        }
+
+        .box {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 10px 0px;
+        }
+
+        .btn1 {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 10px 0px;
+            background-color: green;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .flex {
+            display: flex;
+            gap: 5px;
+        }
+
+        #pay {
+            position: relative;
+            bottom: 0px;
+        }
+    </style>
+
+
 </head>
 
 <body>
+
+    <!-- <input type="text" name="" id="inp">
+
+    <div id="shw" ></div>
+    <button onclick="myfunc()" class="btn1" id="inp1">ADD</button>
+    <a id="downloadLink" download="file.txt" style="display: none;"></a>
+ -->
+
+    <!-- <input type="text" name="" id="inpt">
+<button onclick="submit()"></button>
+    <h5 id="change">Generate Your Password</h5>
+    <button onclick="my()">Generate</button> -->
+    <p id="set"></p>
+    <!-- <div class="flex">
+        <div class="form">
+            <h3>K-Electric Bill Generator</h3>
+            <p id="change">Customer</p>
+            <input type="text" name="Customer" id="customer" required="" placeholder="Enter Customer Name">
+            <p>Current Month</p>
+            <div class="box" id="current">
+                <script>
+                    var now = new Date().getMonth();
+                    var arr = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                    var now2 = new Date().getDate();
+                    var ran = Math.random()*1000000 + 1;
+                    var fix = Math.floor(ran);
+
+                    var yearr = new Date().getFullYear();
+                    document.getElementById("current").innerHTML = now2 + " " + arr[now] + "," + yearr;
+
+                </script>
+            </div>
+            <p>Units Consume</p>
+            <input type="number" name="Unit" id="unit" required="" placeholder="Enter Units Consumed">
+            <button onclick="myfunc()" type="button">Generate</button>
+        </div>
+
+        <div id="generate" style="position:relative;top:0px;right: 0px;left: 0px;">
+            <h3>Generate K-Electric Bill Result</h3>
+        </div>
+
+    </div>
+    <script>
+        function myfunc() {
+            var customer = document.getElementById("customer").value;
+
+            var units = document.getElementById("unit").value;
+            var uni = units;
+
+            var totalAmount = units * 40;
+            var po = totalAmount.toFixed(2);
+            if (now2 > 16) {
+                var po2 = (totalAmount + 150).toFixed(2);
+
+            } else {
+                po2 = (0).toFixed(2);
+            }
+
+            document.getElementById("generate").innerHTML =
+                `<h3>Generate K-Electric Bill<h3>
+            <p>Customer Name: ${customer}</p>
+            <p>Units Consumed: ${units}</p>
+            <p>Amount to Pay: ${po} (Before Due Date)</p>
+
+            <p>Amount to Pay: ${po2} (After Due Date)</p>
+            <h5>Id#: ${fix}</h5>
+            <p>Current Month : ${now2} ${arr[now]},${yearr}
+                <h5>Payment Methods:</h5>
+                <span><input type="radio"/>Credit Card</span>
+                <div id="pay" >
+                <button onclick="paid()">Pay</button>
+            </div>
+
+            `
+
+
+        }
+        function paid(){
+            document.getElementById("pay").innerHTML = "<div style:'transform:rotateY(238deg) !important'><p style='padding:10px;position:absolute;bottom:50px;left:50px;right:50px;font-size:50px;max-height:140px;max-width:250px;back-ground-color:#fafa;border:2px solid black;font-weight:bold'>Transaction Succesfull</p></div>"
+        }
+    </script>
+ -->
+
 
     <!-- <div style="text-align: center;">
       <div style="text-align: center;">
@@ -84,6 +231,7 @@
  -->
 
     <p id="traffic"></p>
+
 </body>
 
 </html>
